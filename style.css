@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.main_div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f2f6;
+    display: grid;
+    place-items: center;
+}
+
+.heart {
+    width: 15rem;
+    height: 15rem;
+    background-color: #ff4757;
+    position: relative;
+    transform: rotate(45deg);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.77);
+    box-shadow: 0px 0px 30px 0px rgba(50, 50, 50, 0.77);
+    animation: heartbeat 1s linear  infinite;
+}
+
+.heart::before {
+    content: '';
+    width: 15rem;
+    height: 15rem;
+    background-color: #ff4757;
+    position: absolute;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.heart::after {
+    content: '';
+    width: 15rem;
+    height: 15rem;
+    background-color: #ff4757;
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@keyframes heartbeat{
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    20%{
+        transform: rotate(45deg) scale(1);
+    }
+    40%{
+        transform: rotate(45deg) scale(1.4);
+    }
+    60%{
+        transform: rotate(45deg) scale(1.2);
+    }
+    80%{
+        transform: rotate(45deg) scale(1.4);
+    }
+    100%{
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .heart{
+        width: 12rem;
+        height: 12rem;
+    }
+    .heart::before{
+        width: 12rem;
+        height: 12rem;
+    }
+    .heart::after{
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 371px) {
+    .heart{
+        width: 10rem;
+        height: 10rem;
+    }
+    .heart::before{
+        width: 10rem;
+        height: 10rem;
+    }
+    .heart::after{
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 287px) {
+    .heart{
+        width: 8rem;
+        height: 8rem;
+    }
+    .heart::before{
+        width: 8rem;
+        height: 8rem;
+    }
+    .heart::after{
+        width: 8rem;
+        height: 8rem;
+    }
+}
